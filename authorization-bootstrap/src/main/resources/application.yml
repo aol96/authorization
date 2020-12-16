@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  context-path: /
+
+spring:
+  profiles:
+    active:
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_db?serverTimezone=UTC&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    username: root
+    password: mysql123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  jpa:
+    database: MYSQL
+    hibernate:
+#      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
